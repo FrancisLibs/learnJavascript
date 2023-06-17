@@ -5,8 +5,10 @@
 		<title>Les Bonnes Pièces</title>
 		<link rel="stylesheet" href="styles.css">
 		<script type="module" src="pieces.js"></script>
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
 	</head>
-	<body>
+	<body class="container">
 		<header>
 			<img src="images/logo-les-bonnes-pieces.png" alt="LOGO">
 			<h1>Les Bonnes Pièces</h1>
@@ -15,10 +17,27 @@
 			<!-- Menu de recherche -->
 			<section class="filtres">
 				<h3>Filtres</h3>
+				<button class="btn-trier">Trier par prix croissant</button>
+				<br>
+				<button class="btn-decroissant">Trier par prix décroissant</button>
+				<br>
+				<button class="btn-filtrer">Filtrer les pièces non abordables</button>
+				<br>
+				<button class="btn-nodesc">Filtrer les pièces sans description</button>
+				<br>
+				<div class="select-prix mt-2">
+					<label for="volume">Prix max</label>
+					<br>
+					<input type="range" id="prix-max" name="volume" min="0" max="60" step="5">
+				</div>
 			</section>
 
 			<!-- Fiches produits -->
-			<section class="fiches">
+			<section
+				class="fiches">
+				<!-- Code ajouté -->
+				<div class="abordables"></div>
+				<div class="disponibles"></div>
 			</section>
 		</main>
 	</body>
